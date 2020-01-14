@@ -10,6 +10,10 @@ resources:
     type: github
     endpoint: azuregithubtoken
     name: rewardnightcheatbingle/winBatch
+  - repository: BrianCalc
+    type: github
+    endpoint: azuregithubtoken
+    name: rewardnightcheatbingle/Calc
 
 trigger:
 - master
@@ -44,7 +48,7 @@ stages:
       SECOND: 20
       OPERATION: 4
     steps:
-      - checkout: BrianWinBatch
+      - checkout: BrianCalc
       - task: Bash@3
         displayName: 'install bc'
         inputs:
@@ -58,3 +62,4 @@ stages:
         displayName: 'run calc'
         inputs:
           filePath: 'calc.sh'
+
