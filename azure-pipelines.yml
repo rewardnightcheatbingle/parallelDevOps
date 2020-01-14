@@ -22,7 +22,7 @@ stages:
     pool:
       vmImage: 'ubuntu-latest'
     steps:
-    - checkout: none
+    - checkout: BrianParallelDevOps
     - script: echo Hello, world!
       displayName: 'Run a one-line script'
     - script: |
